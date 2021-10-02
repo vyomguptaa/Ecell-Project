@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
+@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+
+.avatar{
+display: inline-block;
+}
+
+.plus{
+    font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: inherit;
+    color: black !important;
+
+}
+.ideabar{
+    padding: 2% 14% 2% 14%;
+}
+/* .postcontent{
+    padding: 1% 12% 1% 12%;
+} */
+
+.logo{
+    width: 90%;
+    height: 90%;
+    padding-right: 400px;
+}
+.logo1{
+    width: 80%;
+    height: 80%;
+}
+.nav{
+    width: 100%;
+}
+.but-head{
+    color: black;
+    background-color: #e9ecef;
+}
+/* .card{
+    width:18rem;
+} */
