@@ -4,6 +4,7 @@ import CommentForm from "./CommentForm";
 import RootCommentContext from "../RootCommentContext";
 import Comments from "./Comments";
 import axios from "axios";
+import PostContentInModal from "../Postsection/PostContentInModal";
 
 function Comment(props) {
     const [comment, setComment] = useState({});
@@ -44,12 +45,15 @@ function Comment(props) {
 
     return (
         <>
-            {comment && <Post {...comment}  style={{color:"red"}} open={true} />}
+            {comment && <PostContentInModal {...comment} open={true} />}
             {!!comment && !!comment._id && (
                 <>
-                    <hr className="border-reddit_border my-4" />
-                    <CommentForm onSubmit={() => refreshComments()} rootId={comment._id} parentId={comment._id} showAuthor={true} />
-                    <hr className="border-reddit_border my-4" />
+                    <div>
+                        <hr className="border-reddit_border my-4" />
+                        <CommentForm className="commentIn__modal" onSubmit={() => refreshComments()} rootId={comment._id} parentId={comment._id} showAuthor={true} />
+                        <hr className="border-reddit_border my-4" />
+                    </div>
+                    
                     <RootCommentContext.Provider value={{ refreshComments, refreshVotes, commentsTotals, userVotes }}>
                         <Comments parentId={comment._id} rootId={comment._id} comments={comments} />
                     </RootCommentContext.Provider>

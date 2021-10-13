@@ -5,7 +5,7 @@ import { Redirect } from "react-router-dom";
 import axios from "axios";
 import Modal from "react-modal";
 import { useHistory } from "react-router-dom";
-import ClickOutHandler from "react-clickout-handler";
+// import ClickOutHandler from "react-clickout-handler";
 // import CommentForm from "./CommentForm";
 // import Comments from "./Comments";
 // import RootCommentContext from "./RootCommentContext";
@@ -14,11 +14,11 @@ import Comment from "./Comment";
 function CommentModal(props) {
   const myCustModalStyle = {
     overlay: {
-      background: "#212529"
+      background: "#212529",
     },
-    content:{
-      background: "linear-gradient(180deg, #E9ECEF -1.63%, #DEE2E6 100%)"
-    }
+    content: {
+      background: "linear-gradient(180deg, #E9ECEF -1.63%, #DEE2E6 100%)",
+    },
   };
   const [comment, setComment] = useState({});
   const [modalIsOpen, setmodalIsOpen] = useState(true);
@@ -42,10 +42,11 @@ function CommentModal(props) {
   return (
     <Modal
       isOpen={modalIsOpen}
+      appElement={document.getElementById("root") || undefined}
       onRequestClose={redirectToHost}
       style={myCustModalStyle}
     >
-      <div className="" >
+      <div className="">
         <div className="block overflow-scroll" style={{}}>
           <Comment comment={comment} id={props.id} />
         </div>

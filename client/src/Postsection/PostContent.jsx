@@ -14,21 +14,23 @@ function PostContent(props) {
 
   return (
     <div className="">
-          <Card>
-            <Card.Body>
-              <Card.Title className="text-black md:font-bold">
-                {props.title}
-              </Card.Title>
-              <Card.Subtitle className="mb-2 text-black ">
-                {" "}
-                {props.author} | <TimeAgo datetime={props.postedAt} />{" "}
-              </Card.Subtitle>
-              <Card.Text className=" text-black font-medium">
-                {/* <ReactMarkdown plugins={[gfm]} children={props.body} /> */}
-                {props.type==="post-modal" ? props.notcutDownText : props.cutDownText }
-              </Card.Text>
-            </Card.Body>
-          </Card>
+      <Card>
+        <Card.Body>
+          <Card.Title className="text-black md:font-bold">
+            {props.title}
+          </Card.Title>
+          <Card.Subtitle className="mb-2 text-black ">
+            {" "}
+            {props.author} | <TimeAgo datetime={props.postedAt} />{" "}
+          </Card.Subtitle>
+          <Card.Text className=" text-black font-medium">
+            {/* <ReactMarkdown plugins={[gfm]} children={props.body} /> */}
+            {props.type === "post-modal"
+              ? props.notcutDownText
+              : props.cutDownText}
+          </Card.Text>
+        </Card.Body>
+      </Card>
       {/*                     
       <div>
         <Votingpost commentId={post._id} />

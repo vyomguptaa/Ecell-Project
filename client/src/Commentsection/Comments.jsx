@@ -14,7 +14,7 @@ function Comments(props) {
     const rootCommentInfo = useContext(RootCommentContext);
 
     return (
-        <div className={"my-2 text-reddit_text"}>
+        <div className={"my-2 text-reddit_text"} style={{background:"black",padding:"15px"}}>
             {comments.map((comment) => {
                 const replies = props.comments.filter((c) => c.parentId === comment._id);
                 return (
