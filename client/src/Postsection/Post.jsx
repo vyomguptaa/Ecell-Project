@@ -2,7 +2,24 @@ import React from "react";
 import { Link } from "react-router-dom";
 import PostContent from "./PostContent";
 
+function PreviewText(propText){
+    if(propText.length>200){
+      let propText1 = propText.slice(0,200);
+      while (propText1.charAt(propText1.length-1)!==" " && propText1.length!==0){
+        propText1 = propText1.slice(0,-1);
+      }
+      propText1 = propText1+" ...Read More";
+      return propText1;
+    }
+    else{
+      return propText + " ...Read More";
+    }
+}
+
 function Post(props) {
+    const text = `${props.body}`;
+    const finaltext = PreviewText(text);
+
     let postClasses = "block border rounded-md " + (props.open ? "" : "hover:border-reddit_text cursor-pointer");
     if (props.isListing) {
         postClasses += "  box p-5 sm-2 card border-2  ";
@@ -14,7 +31,7 @@ function Post(props) {
         <div className="text-reddit_text postcontent pb-4">
             {props.open && (
                 <div className={postClasses}>
-                    <PostContent {...props} />
+                    <PostContent type="post-modal" {...props} notcutDownText={props.body}/>
                 </div>
             )}
             {!props.open && (
@@ -25,7 +42,7 @@ function Post(props) {
                     }}
                     className={postClasses}
                 >
-                    <PostContent {...props} />
+                    <PostContent {...props} cutDownText={finaltext}/>
                 </Link>
             )}
         </div>
