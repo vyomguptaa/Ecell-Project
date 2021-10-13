@@ -44,7 +44,7 @@ function Comment(props) {
 
     return (
         <>
-            {comment && <Post {...comment} open={true} />}
+            {comment && <Post {...comment}  style={{color:"red"}} open={true} />}
             {!!comment && !!comment._id && (
                 <>
                     <hr className="border-reddit_border my-4" />
