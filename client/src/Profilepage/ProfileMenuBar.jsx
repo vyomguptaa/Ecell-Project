@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 function ProfileMenuBar() {
-  const [leftPosition, setleftPosition] = useState("1.3%");
-  const [widthStyle, setWidthStyle] = useState("14%");
+  const [leftPosition, setleftPosition] = useState("1.2%");
+  const [widthStyle, setWidthStyle] = useState("13.5%");
   const currTitleButtonStyle = {
     position: "absolute",
     width: `${widthStyle}`,
-    height: "12.31px",
+    height: "7px",
     left: `${leftPosition}`,
     bottom: "0px",
     background: "#219ebc",
@@ -18,10 +18,10 @@ function ProfileMenuBar() {
     <div className="profileMenuBar__mainDiv">
       <Link
         className="menu__titles"
-        to="/ProfilePage"
+        to="/ProfilePage/overview"
         onClick={() => {
-          setleftPosition("1.3%");
-          setWidthStyle("14%");
+          setleftPosition("1.2%");
+          setWidthStyle("13.5%");
         }}
       >
         Overview
@@ -29,10 +29,10 @@ function ProfileMenuBar() {
       <div style={currTitleButtonStyle} className="current__menu--tile"></div>
       <Link
         className="menu__titles"
-        to="/ProfilePage"
+        to="/ProfilePage/mypost"
         onClick={() => {
           setleftPosition("16%");
-          setWidthStyle("12%");
+          setWidthStyle("9.8%");
         }}
       >
         Posts
@@ -41,8 +41,8 @@ function ProfileMenuBar() {
         className="menu__titles"
         to="/ProfilePage"
         onClick={() => {
-          setleftPosition("28%");
-          setWidthStyle("17.5%");
+          setleftPosition("27.2%");
+          setWidthStyle("16.2%");
         }}
       >
         Comments
@@ -51,11 +51,21 @@ function ProfileMenuBar() {
         className="menu__titles"
         to="/ProfilePage"
         onClick={() => {
-          setleftPosition("46.5%");
-          setWidthStyle("12%");
+          setleftPosition("45%");
+          setWidthStyle("10.2%");
         }}
       >
         Saved
+      </Link>
+      <Link
+        className="menu__titles"
+        to="/ProfilePage"
+        onClick={() => {
+          setleftPosition("57%");
+          setWidthStyle("24.8%");
+        }}
+      >
+        Connect Requests
       </Link>
     </div>
   );

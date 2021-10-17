@@ -1,18 +1,22 @@
 import React from "react";
-import ProfileBioSection from "./ProfileBioSection";
-import ProfileMainSection from "./ProfileMainSection";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ProfileMenuBar from "./ProfileMenuBar";
-import ProfileOverview from "./ProfileOverview";
-import ProfilePrivate from "./ProfilePrivate";
+import ProfileOverview from "./Overviewpage/ProfileOverview";
+import ProfilePost from "./Postpage/ProfilePost";
 
 function ProfilePage() {
   return (
-    <div>
-      <div className="profilePage__main--div">
-        <ProfileMenuBar />
-        <ProfileOverview />
-      </div>
-    </div>
+    <Router>
+      <Switch>
+        <div>
+          <div className="profilePage__main--div">
+            <ProfileMenuBar />
+            <Route path="/ProfilePage/overview" component={ProfileOverview} />
+            <Route path="/ProfilePage/mypost" component={ProfilePost} />
+          </div>
+        </div>
+      </Switch>
+    </Router>
   );
 }
 

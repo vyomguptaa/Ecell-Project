@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./Header";
-import { BrowserRouter as Router,Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import RoutingSwitch from "./RoutingSwitch";
 import PostFormModal from "./Postsection/PostFormModal";
 import AuthModal from "./SignUpsection/AuthModal";

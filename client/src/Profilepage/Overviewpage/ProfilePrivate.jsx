@@ -8,12 +8,16 @@ function ProfilePrivate(props) {
   const phoneNumber = "919137019147";
   return (
     <div className="profilePrivate__mainDiv">
-      <h1>Private Info</h1>
+      <h1 style={{fontSize:"1.4rem"}}>Private Info</h1>
       {connected ? (
         <div>
           <div className="phoneNo">
             <WhatsAppIcon
-              style={{ background: "#46C554", borderRadius: "20%" }}
+              style={{
+                background: "#46C554",
+                borderRadius: "20%",
+                marginRight: "1%",
+              }}
             />
             <span>Phone no: </span>
             <a
@@ -21,7 +25,7 @@ function ProfilePrivate(props) {
               target="_blank"
               rel="noreferrer"
             >
-              {phoneNumber}
+              {` +91 ${phoneNumber.slice(2,)}`}
             </a>
           </div>
           <div className="emailId">
@@ -29,6 +33,7 @@ function ProfilePrivate(props) {
               style={{
                 background: "linear-gradient(#1A8DF3,#00CBFA)",
                 borderRadius: "20%",
+                marginRight: "1%",
               }}
             />
             <span>Email ID: </span>
@@ -36,7 +41,7 @@ function ProfilePrivate(props) {
           </div>
         </div>
       ) : (
-        "Connect to view!"
+        <h1>Connect to view!</h1>
       )}
     </div>
   );

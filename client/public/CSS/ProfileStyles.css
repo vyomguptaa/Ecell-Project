@@ -1,14 +1,14 @@
 .profilePage__main--div {
   position: relative;
-  top: 6vh;
-  left: 11.7vw;
-  width: 75vw;
-  height: 85vh;
+  top: 4.5vh;
+  left: 20vw;
+  width: 60vw;
+  height: 76vh;
 }
 .profileMenuBar__mainDiv {
   position: absolute;
-  width: 75vw;
-  height: 10vh;
+  width: 60vw;
+  height: 7vh;
   top: 0px;
   background-color: #212529;
   display: flex;
@@ -21,23 +21,21 @@
   font-family: Poppins;
   font-style: normal;
   font-weight: bold;
-  /* font-size: 1.4rem; */
-  font-size: 27px;
-  /* line-height: 42px; */
-  margin: 2% 2% 2% 2%;
+  font-size: 1.3rem;
+  margin: 1% 2% 2% 2%;
 }
 
 .mainAnd__bio {
   position: relative;
   display: flex;
-  top: 13vh;
+  top: 9vh;
 }
 
 .profileMainSection__mainDiv {
   position: absolute;
   left: 0px;
-  height: 53vh;
-  width: 33vw;
+  height: 48vh;
+  width: 26vw;
   background-color: #212529;
   color: white;
   border-radius: 10px;
@@ -73,8 +71,8 @@
 .profileBio__mainDiv {
   position: absolute;
   right: 0px;
-  height: 53vh;
-  width: 40vw;
+  height: 48vh;
+  width: 33vw;
   background-color: #212529;
   color: white;
   border-radius: 10px;
@@ -87,15 +85,15 @@
   margin-top: 10%;
 }
 
+/* private Info section */
 .profilePrivate__mainDiv {
   position: absolute;
   bottom: 0px;
-  width: 75vw;
-  /* height: 14vh; */
+  width: 60vw;
   background-color: #212529;
   color: white;
   border-radius: 10px;
-  padding: 1%;
+  padding: 1.5% 2% 1% 2%;
 }
 
 .phoneNo{
