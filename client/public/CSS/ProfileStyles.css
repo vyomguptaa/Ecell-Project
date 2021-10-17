@@ -1,0 +1,107 @@
+.profilePage__main--div {
+  position: relative;
+  top: 6vh;
+  left: 11.7vw;
+  width: 75vw;
+  height: 85vh;
+}
+.profileMenuBar__mainDiv {
+  position: absolute;
+  width: 75vw;
+  height: 10vh;
+  top: 0px;
+  background-color: #212529;
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 10px;
+}
+
+.menu__titles {
+  color: white;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  /* font-size: 1.4rem; */
+  font-size: 27px;
+  /* line-height: 42px; */
+  margin: 2% 2% 2% 2%;
+}
+
+.mainAnd__bio {
+  position: relative;
+  display: flex;
+  top: 13vh;
+}
+
+.profileMainSection__mainDiv {
+  position: absolute;
+  left: 0px;
+  height: 53vh;
+  width: 33vw;
+  background-color: #212529;
+  color: white;
+  border-radius: 10px;
+  padding: 2%;
+}
+.profileMainButton__connect {
+  position: absolute;
+  background: linear-gradient(96.25deg, #219ebc 3.59%, #8ecae6 150.4%);
+  right: 37%;
+  width: 25%;
+  height: 10%;
+  border-radius: 17.28px;
+  margin: 0 10px 0 0;
+}
+.profileMainButton__follow {
+  position: absolute;
+  background: linear-gradient(96.25deg, #219ebc 3.59%, #8ecae6 150.4%);
+  right: 12%;
+  width: 25%;
+  height: 10%;
+  border-radius: 17.28px;
+}
+
+.likes {
+  margin-bottom: 10%;
+}
+.comments {
+  margin-bottom: 10%;
+}
+.views {
+  margin-bottom: 10%;
+}
+.profileBio__mainDiv {
+  position: absolute;
+  right: 0px;
+  height: 53vh;
+  width: 40vw;
+  background-color: #212529;
+  color: white;
+  border-radius: 10px;
+  padding: 2%;
+}
+
+.portfolioLinks {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+}
+
+.profilePrivate__mainDiv {
+  position: absolute;
+  bottom: 0px;
+  width: 75vw;
+  /* height: 14vh; */
+  background-color: #212529;
+  color: white;
+  border-radius: 10px;
+  padding: 1%;
+}
+
+.phoneNo{
+  margin: 0.5%;
+}
+
+.emailId{
+  margin: 0.5% 0.5% 1% 0.5%;
+}

@@ -24,7 +24,7 @@ function Post(props) {
   const finaltext = PreviewText(text);
 
   let postClasses =
-    "block border rounded-md " +
+    "block border rounded-md text__body--post " +
     (props.open ? "" : "hover:border-reddit_text cursor-pointer");
   if (props.isListing) {
     postClasses += "  box p-5 sm-2 card border-2  ";

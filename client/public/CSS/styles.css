@@ -95,3 +95,7 @@ html {
 
   color: #343a40;
 }
+
+.text__body--post{
+  color: red;
+}
